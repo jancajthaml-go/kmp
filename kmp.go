@@ -15,12 +15,11 @@ func Search(input, pattern string) []int {
 
 	var result = make([]int, 0)
 	var l = 0
-	var i = 0
+	var i = 1
 	var j = 0
-
 	var lps = make([]int, M)
 
-	for i = 1; i < M; i++ {
+	for ; i < M; i++ {
 		for {
 			if pattern[i] == pattern[l] {
 				l++
@@ -36,7 +35,10 @@ func Search(input, pattern string) []int {
 		lps[i] = l
 	}
 
-	for i, j = 0, 0; i < N; i++ {
+	i = 0
+	j = 0
+
+	for ; i < N; i++ {
 		for {
 			if pattern[j] == input[i] {
 				j++

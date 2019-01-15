@@ -13,8 +13,10 @@ kmp.Search("GEEKS FOR GEEKS", "GEEK")
 ### Performance ###
 
 ```
-BenchmarkHammingParallel-4    300000000           4.25 ns/op
-BenchmarkHammingSerial-4      200000000           8.77 ns/op
+BenchmarkKnuthMorrisPrattSmall-4          20000000  63.6 ns/op  16 B/op  2 allocs/op
+BenchmarkKnuthMorrisPrattLarge-4          10000000   153 ns/op  40 B/op  3 allocs/op
+BenchmarkKnuthMorrisPrattSmallParallel-4  50000000  37.8 ns/op  16 B/op  2 allocs/op
+BenchmarkKnuthMorrisPrattLargeParallel-4  20000000  86.1 ns/op  40 B/op  3 allocs/op
 ```
 
 test on your own by running `make benchmark`
