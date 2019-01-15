@@ -19,7 +19,7 @@ BenchmarkKnuthMorrisPrattSmallParallel-4  50000000  37.8 ns/op  16 B/op  2 alloc
 BenchmarkKnuthMorrisPrattLargeParallel-4  20000000  86.1 ns/op  40 B/op  3 allocs/op
 ```
 
-test on your own by running `make benchmark`
+verify your performance by running `make benchmark`
 
 ## Resources
 
