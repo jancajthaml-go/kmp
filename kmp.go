@@ -5,7 +5,8 @@
 //
 package kmp
 
-func Search(input, pattern string) []int {
+// Search for pattern in given input and returns slice of matche indicies
+func Search(input string, pattern string) []int {
 	var M = len(pattern)
 	var N = len(input)
 
