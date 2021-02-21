@@ -7,18 +7,22 @@ package kmp
 
 // Search for pattern in given input and returns slice of matche indicies
 func Search(input string, pattern string) []int {
-	var M = len(pattern)
-	var N = len(input)
+	var (
+		M = len(pattern)
+		N = len(input)
+	)
 
 	if N == 0 || M == 0 {
 		return nil
 	}
 
-	var result = make([]int, 0)
-	var l = 0
-	var i = 1
-	var j = 0
-	var lps = make([]int, M)
+	var (
+		result = make([]int, 0)
+		l = 0
+		i = 1
+		j = 0
+		lps = make([]int, M)
+	)
 
 	for ; i < M; i++ {
 		for {
@@ -26,11 +30,9 @@ func Search(input string, pattern string) []int {
 				l++
 				break
 			}
-
 			if l == 0 {
 				break
 			}
-
 			l = lps[l-1]
 		}
 		lps[i] = l
@@ -50,7 +52,6 @@ func Search(input string, pattern string) []int {
 				}
 				break
 			}
-
 			if j > 0 {
 				j = lps[j-1]
 			} else {
